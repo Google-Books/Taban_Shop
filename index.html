@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>پوشاک تابان | فروشگاه آنلاین لباس</title>
+<meta name="description" content="با پوشاک تابان در همه جا بدرخشید — مانتو، لباس مجلسی، لباس خانه‌گی، شلوار، چادر و کت شلوار با کیفیت عالی و قیمت مناسب.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&family=Lalezar&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===================== Splash ===================== -->
+<div id="splash">
+  <div class="splash-inner">
+    <div class="splash-mark">با پوشاک تابان در همه جا بدرخشید</div>
+    <div class="splash-sub">TABAN CLOTHING · در حال آماده‌سازی فروشگاه<span class="splash-dot"></span></div>
+  </div>
+</div>
+
+<!-- ===================== Header ===================== -->
+<header class="topbar">
+  <div class="brand" id="brandHome">
+    <div class="brand-badge">ت</div>
+    <div>
+      <div class="brand-name">تابان</div>
+      <div class="brand-tag">TABAN CLOTHING</div>
+    </div>
+  </div>
+  <div class="top-actions">
+    <button class="icon-btn" id="themeToggle" title="تغییر پوسته">
+      <svg id="themeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"/></svg>
+    </button>
+    <button class="icon-btn" id="drawerBtn" title="منو">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- ===================== App mount ===================== -->
+<main id="app"></main>
+
+<!-- ===================== Admin FAB ===================== -->
+<button class="admin-fab hidden" id="adminAddFab">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 5v14M5 12h14"/></svg>
+  افزودن محصول
+</button>
+
+<!-- ===================== Drawer ===================== -->
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer">
+  <div class="drawer-head">
+    <div class="brand-name">پوشاک تابان</div>
+    <p>وارد کننده و صادر کننده پوشاک، عمده و پرچون</p>
+  </div>
+  <div class="admin-pill hidden" id="adminPill">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.6 5.8L21 9l-4.9 4.1L17.5 20 12 16.6 6.5 20l1.4-6.9L3 9l6.4-1.2L12 2Z"/></svg>
+    حالت مدیریت فعال است
+  </div>
+  <nav class="drawer-list">
+    <button class="drawer-item" data-modal="signup">
+      <span class="di-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg></span>
+      ثبت‌نام برای دریافت جدیدترین مدل‌ها
+    </button>
+    <button class="drawer-item" data-modal="address">
+      <span class="di-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.4"/></svg></span>
+      آدرس ما
+    </button>
+    <button class="drawer-item" data-modal="contact">
+      <span class="di-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5h16v14l-4-3H4z"/></svg></span>
+      تماس با ما
+    </button>
+    <button class="drawer-item" data-modal="about">
+      <span class="di-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v5h1"/></svg></span>
+      درباره ما
+    </button>
+    <button class="drawer-item" data-modal="social">
+      <span class="di-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="6" cy="12" r="2.4"/><circle cx="18" cy="6" r="2.4"/><circle cx="18" cy="18" r="2.4"/><path d="m8.2 10.8 7.6-4.4M8.2 13.2l7.6 4.4"/></svg></span>
+      شبکه‌های اجتماعی
+    </button>
+    <button class="drawer-item hidden" id="adminExitBtn">
+      <span class="di-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></svg></span>
+      خروج از حالت مدیریت
+    </button>
+  </nav>
+  <div class="drawer-foot">
+    <div class="theme-row">
+      <span>پوسته نمایش</span>
+      <button class="icon-btn" id="drawerThemeToggle">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"/></svg>
+      </button>
+    </div>
+  </div>
+</aside>
+
+<!-- ===================== Modal mount ===================== -->
+<div class="modal-wrap" id="modalWrap">
+  <div class="modal-card" id="modalCard"></div>
+</div>
+
+<!-- ===================== Fullscreen viewer ===================== -->
+<div class="viewer" id="viewer">
+  <button class="v-close" id="viewerClose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+  <img id="viewerImg" src="" alt="">
+</div>
+
+<!-- ===================== Toasts ===================== -->
+<div class="toast-wrap" id="toastWrap"></div>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
